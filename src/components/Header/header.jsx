@@ -1,12 +1,12 @@
 import React from "react";
-import Avatar from "@material-ui/core/Avatar";
-import "./header.scss";
-import { AccessTime, HelpOutline, Search } from "@material-ui/icons";
+ import "./header.scss";
+import { AccessTime, HelpOutline, Search, AccountCircle} from "@material-ui/icons";
 const Header = () => {
   return (
     <div className="header">
       <div className="header__left">
-        <Avatar
+        Ava
+        <AccountCircle
           className="header__avatar"
           alt="David"
           src=""
