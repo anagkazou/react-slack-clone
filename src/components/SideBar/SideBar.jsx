@@ -19,7 +19,7 @@ import db from "../../firebase";
 
 const SideBar = () => {
   const [channels, setChannels] = useState([]);
-
+   
   useEffect(() => {
     const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
       setChannels(
@@ -56,9 +56,9 @@ const SideBar = () => {
       <hr />
       <SidebarOption Icon={ExpandMore} title="Show more" />
       <hr />
-      <SidebarOption Icon={Add} title="Add Channel" />
+      <SidebarOption Icon={Add} title="Add Channel" addChannelOption />
       {channels.map(channel => (
-        <SidebarOption title ={channel.name} key={channel.id} />
+        <SidebarOption title ={channel.name} key={channel.id} id={channel.id} />
       ))}
       <hr />
      
